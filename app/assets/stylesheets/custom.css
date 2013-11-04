@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "MarketingScriptRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("☺"), url("fonts/MarketingScript-webfont.woff") format("woff"), url("fonts/MarketingScript-webfont.ttf") format("truetype"), url("fonts/MarketingScript-webfont.svg#webfontZ5AiaAsu") format("svg");
+}
+
+header .logo-text {
+    line-height: 1;
+}
+
+h2.logo-text {
+    font-family: "MarketingScriptRegular";
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    color: #733A70;
+}
+
+h6.logo-text {
+    /*font-weight: bold;*/
+    font-size: 0.815em;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    color: #ffffff;
+}
+
+footer .dev-info {
+    float: right;
+}
+
+footer .copyright {
+    float: left;
+}

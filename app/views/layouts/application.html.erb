@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Photographer - Ekaterina Selyanik" %></title>
+
+    <!--<link rel="shortcut icon" href="stylesheets/img/camera.png">-->
+    <%= favicon_link_tag "camera.png" %>
+  	<%= stylesheet_link_tag "application" %>
+    <!-- stylesheet_link_tag "custom" -->
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <section>
+        <header>
+            <div class="row">
+                <div class="large-12 columns">
+                    <!--<img src="stylesheets/img/ca_1.jpeg"/>-->
+                    <h2 class="logo-text">Ekaterina Selyanik</h2>
+                    <h6 class="logo-text">PHOTOGRAPHER</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <!-- NAVIGATION -->
+                    <div class="contain-to-grid fixed">
+                        <nav class="top-bar">
+                            <ul class="title-area">
+                                <!-- Title Area -->
+                                <li class="name">
+                                </li>
+                                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                                <li class="toggle-topbar menu-icon"><a href=""><span>Меню</span></a></li>
+                            </ul>
+
+                            <section class="top-bar-section">
+                                <ul class="left">
+                                    <li class="has-dropdown not-click">
+                                        <a href="/grid.php">ПОРТФОЛИО</a>
+                                        <ul class="dropdown">
+                                            <li class=""><label>Категории</label></li>
+                                            <li class=""><a href="portfolio_sessions.html">Фотосессии</a></li>
+                                            <li class=""><a href="#">Sub-item 2</a></li>
+                                            <li class="divider"></li>
+                                            <li class=""><a href="#">Sub-item 3</a></li>
+                                            <li class=""><a href="#">Sub-item 4</a></li>
+                                            <li class=""><a href="#">Sub-item 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">ОБО МНЕ</a>
+                                        <ul class="dropdown">
+                                            <li class=""><label>Level One</label></li>
+                                            <li class=""><a href="#">Sub-item 1</a></li>
+                                            <li class=""><a href="#">Sub-item 2</a></li>
+                                            <li class="divider"></li>
+                                            <li class=""><a href="#">Sub-item 3</a></li>
+                                            <li class=""><a href="#">Sub-item 4</a></li>
+                                            <li class=""><a href="#">Sub-item 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">КОНТАКТЫ</a>
+                                        <ul class="dropdown">
+                                            <li class=""><label>Level One</label></li>
+                                            <li class=""><a href="#">Sub-item 1</a></li>
+                                            <li class=""><a href="#">Sub-item 2</a></li>
+                                            <li class="divider"></li>
+                                            <li class=""><a href="#">Sub-item 3</a></li>
+                                            <li class=""><a href="#">Sub-item 4</a></li>
+                                            <li class=""><a href="#">Sub-item 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <!--<li class="divider"></li>-->
+                                </ul>
+                                <!-- Right Nav Section -->
+                                <!--<ul class="right">-->
+                                    <!--<li class="divider hide-for-small"></li>-->
+                                    <!--<li class=""><a href="#">Item 2</a></li>-->
+                                <!--</ul>-->
+                            </section>
+                        </nav>
+                    </div>
+                </div>
+            </div> <!-- end of fixed -->
+        </header>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="panel">
+
+                  <!-- page relevant content -->
+                  <%= yield %>
+
+                </div><!-- end of panel -->
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="large-12 columns">
+                    <aside>
+                        <section class="copyright">
+                            <h6>
+                                &copy; Профессиональный фотограф Екатерина Селяник.
+                                <a title="я на vk.com" target="_blank" href="http://vk.com/rijaidevo4ka">Екатерина Селяник на vk.com</a>
+                            </h6>
+                        </section>
+
+                        <div class="dev-info">
+                            <h6>
+                                <em>development&design by <a href="http://www.linkedin.com/pub/dmitry-gubin/38/581/180/">Dzmitry Hubin</a></em>
+                            </h6>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
