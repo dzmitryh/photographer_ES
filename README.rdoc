@@ -1,11 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to get things working:
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version is 2.0
 
 * System dependencies
 
